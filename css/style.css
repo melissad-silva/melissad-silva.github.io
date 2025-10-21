@@ -75,7 +75,7 @@ body {
 }
 
 .home-image {
-    max-width: 400px;
+    max-width: 300px;
     flex: 1;
     display: flex;
     justify-content: center;
