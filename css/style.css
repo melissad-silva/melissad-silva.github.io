@@ -30,7 +30,7 @@ body {
 
 .home-content h3 {
     font-size: 20px; /*ou 1.5rem*/
-    color: rgb(235, 213, 23);
+    color: #ffcc00;
     margin-bottom: 20px;
 }
 
@@ -44,20 +44,26 @@ body {
     display: flex;
     gap: 15px;
     margin-bottom: 30px;
+    
 }
 
 .social-media a {
     font-size: 32px;
     color: white;
     transition: color 0.5s ease;
+<<<<<<< HEAD
     gap: 1rem;
+=======
+    
+>>>>>>> 937ece5414806bfee2065c5e3acd2e618d6e8583
 }
 
 .social-media a:hover {
-    color: rgb(235, 213, 23);
+    color:#ffcc00;
 }
 
 .btn {
+<<<<<<< HEAD
     display: inline-block !important;
     padding: 12px 25px !important;
     background-color:rgb(154, 140, 12) !important;
@@ -70,6 +76,24 @@ body {
 
 .btn:hover {
     background-color:rgb(235, 213, 23) !important;
+=======
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ffcc00;
+
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+
+}
+
+.btn:hover {
+    background-color: #d1a700;
+    transform: translateX(-2px);
+    
+>>>>>>> 937ece5414806bfee2065c5e3acd2e618d6e8583
 }
 
 .home-img {
@@ -85,8 +109,12 @@ body {
     border-radius: 50%; /* Deixa a borda do elemento circular */
     object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
     overflow: hidden; /* Esconde as partes da imagem que ultrapassam o círculo */
-    box-shadow:  0 10px 25px rgba(165,157,157,0.3);
+    /*box-shadow:  0 10px 25px rgba(165,157,157,0.3);*/
+    box-shadow: 0 10px 25px  rgba(255, 204, 0, 0.3);
+    transform: translateX(-1px);
+    
 }
+
 
 @media (max-width: 900px) {
     .home {
