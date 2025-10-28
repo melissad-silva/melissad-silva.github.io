@@ -112,6 +112,7 @@ body {
     /*box-shadow:  0 10px 25px rgba(165,157,157,0.3);*/
     box-shadow: 0 10px 25px  rgba(255, 204, 0, 0.3);
     transform: translateX(-1px);
+    margin-top: 1rem;
     
 }
 
