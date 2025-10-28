@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: rgb(21, 24, 24);
-    color: white;
+    background-color: rgb(21, 24, 24) !important; 
+    color: white !important;
 }
 
 .home {
@@ -50,6 +50,7 @@ body {
     font-size: 32px;
     color: white;
     transition: color 0.5s ease;
+    gap: 1rem;
 }
 
 .social-media a:hover {
@@ -57,18 +58,18 @@ body {
 }
 
 .btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color:rgb(154, 140, 12);
-    color: white;
-    text-decoration: none;
-    border-radius: 20px;
-    font-weight: bold;
-    transition: background-color 0.5s ease;
+    display: inline-block !important;
+    padding: 12px 25px !important;
+    background-color:rgb(154, 140, 12) !important;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 1rem !important;
+    font-weight: bold !important;
+    transition: background-color 0.5s ease !important;
 }
 
 .btn:hover {
-    background-color:rgb(235, 213, 23);
+    background-color:rgb(235, 213, 23) !important;
 }
 
 .home-img {
@@ -79,8 +80,8 @@ body {
 }
 
 .home-img img {
-    width: 300px; /* Defina uma largura */
-    height: 300px; /* Defina a mesma altura para ser um quadrado */
+    width: 300px; 
+    height: 300px;
     border-radius: 50%; /* Deixa a borda do elemento circular */
     object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
     overflow: hidden; /* Esconde as partes da imagem que ultrapassam o círculo */
