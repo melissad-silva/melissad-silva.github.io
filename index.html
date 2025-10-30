@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css"> 
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title> Meu Portfólio </title>
@@ -24,7 +24,7 @@
                 aria-controls="navbarNav"
                 aria-expanded="false"
                 aria-label="Toggle navigation">
-                <i class="bx bx-menu fs-1 text-ligth"></i>
+                <i class="bx bx-menu fs-1 text-light"></i>
             </button>
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -47,71 +47,121 @@
         </div>
     </nav>
 
-    <section class="home" id="home">
-        <div class="home-content">
-            <h1> Melissa Gabriely </h1>
-            <h3>Sou estudante, dev em formação e musicista</h3>
-            <p>Unindo códigos, acordes e histórias, acredito no aprendizado contínuo. Desenvolvo projetos com criatividade e lógica, 
-            toco órgão, teclado, violão e ukulele (arriscando violino) e leio principalmente aventura, ficção científica e terror. 
-            Aberta a colaborações e novos desafios.</p>
+    <section class="home bg-dark text-light py-5" id="home">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                
+                <div class="col-lg-7 mb-4 mb-lg-0 home-content"> <h1 class="display-3 fw-bold"> Melissa Gabriely </h1>
+                    <h3 class="text-warning mb-3">Sou estudante, dev em formação e musicista</h3>
+                    <p class="lead mb-4">Unindo códigos, acordes e histórias, acredito no aprendizado contínuo. Desenvolvo projetos com criatividade e lógica, 
+                    toco órgão, teclado, violão e ukulele (arriscando violino) e leio principalmente aventura, ficção científica e terror. 
+                    Aberta a colaborações e novos desafios.</p>
 
-            <div class="social-media">
-                <a href="https://github.com/melissad-silva" target="_blank">
-                    <i class="bx bxl-github"></i>
-                </a>
-                <a href="https://github.com/melissad-silva" target="_blank">
-                    <i class="bx bxl-facebook-circle"></i>
-                </a>
-                <a href="https://github.com/melissad-silva" target="_blank">
-                    <i class="bx bxl-linkedin-square"></i>
-                </a>
-                <a href="https://github.com/melissad-silva" target="_blank">
-                    <i class="bx bxl-twitter"></i>
-                </a>
-                <a href="https://github.com/melissad-silva" target="_blank">
-                    <i class="bx bxl-instagram-alt"></i>
-                </a>
+                    <div class="d-flex gap-3 fs-3 mb-4">
+                        <a href="https://github.com/melissad-silva" target="_blank" class="text-light"><i class="bx bxl-github"></i></a>
+                        <a href="https://github.com/melissad-silva" target="_blank" class="text-light"><i class="bx bxl-facebook-circle"></i></a>
+                        <a href="https://github.com/melissad-silva" target="_blank" class="text-light"><i class="bx bxl-linkedin-square"></i></a>
+                        <a href="https://github.com/melissad-silva" target="_blank" class="text-light"><i class="bx bxl-twitter"></i></a>
+                        <a href="https://github.com/melissad-silva" target="_blank" class="text-light"><i class="bx bxl-instagram-alt"></i></a>
+                    </div>
+                    
+                    <a href="pdf/cv_melissagabriely.pdf" class="btn btn-outline-warning btn-lg" download="pdf/cv_melissagabriely.pdf" target="_blank">Download CV</a>
+                </div>
 
-            </div>
-            <a href="pdf/cv_melissagabriely.pdf" class="btn" download="pdf/cv_melissagabriely.pdf"
-                target="_blank">Download CV </a>
-        </div>
+                <div class="col-lg-5 text-center">
+                    <div class="home-img"> 
+                        <img src="img/me2.jpeg" alt="Foto Perfil" class="img-fluid shadow-lg"> 
+                    </div>
+                </div>
 
-        <div class="home-img">
-            <img src="img/me2.jpeg" alt="Foto Perfil">
-        </div>
-    </section>
-
-    <section class="skills" id="skills">
-        <h2>Minhas Habilidades</h2>
-        <p class="skills-subtitle">Um equilíbrio entre lógica, arte e aprendizado contínuo.</p>
-
-        <div class="skills-grid">
-            <div class="skill-card">
-                <span class="skill-icon">💻</span>
-                <h3>Desenvolvimento Web</h3>
-                <p>HTML, CSS, Java — aprendendo a criar interfaces limpas, funcionais e acessíveis.</p>
-            </div>
-
-            <div class="skill-card">
-                <span class="skill-icon">🎵</span>
-                <h3>Música & Criatividade</h3>
-                <p>Ritmo, paciência e harmonia aplicados ao código e à vida. Toco teclado, órgão eletrônico, ukulele e violão.</p>
-            </div>
-
-            <div class="skill-card">
-                <span class="skill-icon">🤖</span>
-                <h3>Lógica & Algoritmos</h3>
-                <p>Exploro o raciocínio lógico e estou aprendendo a estruturar soluções que transformam ideias em realidade digital.</p>
-            </div>
-
-            <div class="skill-card">
-                <span class="skill-icon">📚</span>
-                <h3>Aprendizado Contínuo</h3>
-                <p>Estudando frameworks modernos e boas práticas de programação.</p>
             </div>
         </div>
     </section>
+
+    <section class="skills  bg-dark text-light py-5" id="skills">
+        <div class="container">
+            <h2 class="text-center mb-2 fw-bold text-light">Minhas <span class="text-warning">Habilidades</span></h2>
+            <p class="skills-subtitle text-center mb-5 text-muted">Um equilíbrio entre lógica, arte e aprendizado contínuo.</p>
+
+            <div class="row g-4">
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 p-3 shadow-sm text-center">
+                        <span class="skill-icon fs-1 mb-3 text-warning">💻</span>
+                        <h3 class="card-title fw-bold">Desenvolvimento Web</h3>
+                        <p class="card-text text-muted">HTML, CSS, Java — aprendendo a criar interfaces limpas, funcionais e acessíveis.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 p-3 shadow-sm text-center">
+                        <span class="skill-icon fs-1 mb-3 text-warning">🎵</span>
+                        <h3 class="card-title fw-bold">Música & Criatividade</h3>
+                        <p class="card-text text-muted">Ritmo, paciência e harmonia aplicados ao código e à vida. Toco teclado, órgão eletrônico, ukulele e violão.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 p-3 shadow-sm text-center">
+                        <span class="skill-icon fs-1 mb-3 text-warning">🤖</span>
+                        <h3 class="card-title fw-bold">Lógica & Algoritmos</h3>
+                        <p class="card-text text-muted">Exploro o raciocínio lógico e estou aprendendo a estruturar soluções que transformam ideias em realidade digital.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 p-3 shadow-sm text-center">
+                        <span class="skill-icon fs-1 mb-3 text-warning">📚</span>
+                        <h3 class="card-title fw-bold">Aprendizado Contínuo</h3>
+                        <p class="card-text text-muted">Estudando frameworks modernos e boas práticas de programação.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="process py-5 bg-dark text-light" id="services">
+        <div class="container">
+            <h2 class="text-center mb-4 fw-bold text-light">Análise e <span class="text-warning">Desenvolvimento de Sistemas</span></h2>
+            </h2>
+            <p class="process-subtitle text-center mb-5 text-light opacity-75">
+                Aprendendo a ter uma abordagem para transformar problemas de negócio em soluções digitais eficientes.
+            </p>
+
+            <div class="row g-4">
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 p-4 text-center"> 
+                        <span class="process-icon fs-1 mb-3 text-warning">🔎</span>
+                        <h3 class="card-title fw-bold">Análise de Requisitos</h3>
+                        <p class="card-text opacity-75">O JahElvis ensinou ter foco em entender a necessidade do usuário, mapeando as regras de negócio e definindo o escopo através de diagramas UML.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 p-4 text-center">
+                        <span class="process-icon fs-1 mb-3 text-warning">🏗️</span>
+                        <h3 class="card-title fw-bold">Modelagem</h3>
+                        <p class="card-text opacity-75">O Wagão ensinou a criação de modelos de dados (MER) para garantir escalabilidade e manutenção do código.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 p-4 text-center">
+                        <span class="process-icon fs-1 mb-3 text-warning">⚙️</span>
+                        <h3 class="card-title fw-bold">Orientação à Objetos</h3>
+                        <p class="card-text opacity-75">O Hugo ensinou a aplicação dos pilares de Encapsulamento, Herança, Polimorfismo e Abstração para desenvolver código enxutos, reutilizável e de fácil manutenção.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section id="portfolio"></section>
+    <section id="contato"></section>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
