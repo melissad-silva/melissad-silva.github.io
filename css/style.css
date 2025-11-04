@@ -104,3 +104,11 @@ body {
     border-radius: 15px !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffcc00;
+}
