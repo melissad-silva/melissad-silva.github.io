@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/style.css"> 
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title> Meu Portfólio </title>
 </head>
 
@@ -87,7 +88,8 @@
                 
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 p-3 shadow-sm text-center">
-                        <span class="skill-icon fs-1 mb-3 text-warning">💻</span>
+                        <span class="skill-icon fs-1 mb-3 text-warning"><i class="bi bi-filetype-html"></i></span>
+                        
                         <h3 class="card-title fw-bold">Desenvolvimento Web</h3>
                         <p class="card-text text-muted">HTML, CSS, Java — aprendendo a criar interfaces limpas, funcionais e acessíveis.</p>
                     </div>
@@ -95,7 +97,7 @@
                 
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 p-3 shadow-sm text-center">
-                        <span class="skill-icon fs-1 mb-3 text-warning">🎵</span>
+                        <span class="skill-icon fs-1 mb-3 text-warning"><i class="bi bi-music-note"></i></span>
                         <h3 class="card-title fw-bold">Música & Criatividade</h3>
                         <p class="card-text text-muted">Ritmo, paciência e harmonia aplicados ao código e à vida. Toco teclado, órgão eletrônico, ukulele e violão.</p>
                     </div>
@@ -103,7 +105,7 @@
 
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 p-3 shadow-sm text-center">
-                        <span class="skill-icon fs-1 mb-3 text-warning">🤖</span>
+                        <span class="skill-icon fs-1 mb-3 text-warning"><i class="bi bi-robot"></i></span>
                         <h3 class="card-title fw-bold">Lógica & Algoritmos</h3>
                         <p class="card-text text-muted">Exploro o raciocínio lógico e estou aprendendo a estruturar soluções que transformam ideias em realidade digital.</p>
                     </div>
@@ -111,7 +113,7 @@
 
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 p-3 shadow-sm text-center">
-                        <span class="skill-icon fs-1 mb-3 text-warning">📚</span>
+                        <span class="skill-icon fs-1 mb-3 text-warning"><i class="bi bi-book"></i></span>
                         <h3 class="card-title fw-bold">Aprendizado Contínuo</h3>
                         <p class="card-text text-muted">Estudando frameworks modernos e boas práticas de programação.</p>
                     </div>
@@ -129,11 +131,10 @@
                 Aprendendo a ter uma abordagem para transformar problemas de negócio em soluções digitais eficientes.
             </p>
 
-            <div class="row g-4">
-                
+            <div class="row g-4"> 
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm border-0 p-4 text-center"> 
-                        <span class="process-icon fs-1 mb-3 text-warning">🔎</span>
+                        <span class="process-icon fs-1 mb-3 text-warning"><i class="bi bi-search"></i></span>
                         <h3 class="card-title fw-bold">Análise de Requisitos</h3>
                         <p class="card-text opacity-75">O JahElvis ensinou ter foco em entender a necessidade do usuário, mapeando as regras de negócio e definindo o escopo através de diagramas UML.</p>
                     </div>
@@ -141,7 +142,7 @@
 
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm border-0 p-4 text-center">
-                        <span class="process-icon fs-1 mb-3 text-warning">🏗️</span>
+                        <span class="process-icon fs-1 mb-3 text-warning"><i class="bi bi-building-fill-gear"></i></span>
                         <h3 class="card-title fw-bold">Modelagem</h3>
                         <p class="card-text opacity-75">O Wagão ensinou a criação de modelos de dados (MER) para garantir escalabilidade e manutenção do código.</p>
                     </div>
@@ -149,17 +150,40 @@
 
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm border-0 p-4 text-center">
-                        <span class="process-icon fs-1 mb-3 text-warning">⚙️</span>
+                        <span class="process-icon fs-1 mb-3 text-warning"><i class="bi bi-gear-fill"></i></span>
                         <h3 class="card-title fw-bold">Orientação à Objetos</h3>
                         <p class="card-text opacity-75">O Hugo ensinou a aplicação dos pilares de Encapsulamento, Herança, Polimorfismo e Abstração para desenvolver código enxutos, reutilizável e de fácil manutenção.</p>
                     </div>
-                </div>
-                
+                </div>    
             </div>
         </div>
     </section>
     
-    <section id="portfolio"></section>
+    <section id="portfolio">
+        <!--<div class="row g-5 mx-auto">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="" class="d-block w-40" alt="code">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="..." class="d-block w-40" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-40" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>-->
+    </section>
     <section id="contato"></section>
 
 
