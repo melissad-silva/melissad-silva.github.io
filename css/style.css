@@ -38,6 +38,9 @@ body {
 .btn-outline-warning:hover {
     background-color: #ffcc00 !important;
     color: rgb(21, 24, 24) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.3) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
@@ -48,8 +51,11 @@ body {
     border-radius: 50% !important;
     object-fit: cover !important; 
     overflow: hidden !important;
-    box-shadow: 0 10px 25px  rgba(255, 204, 0, 0.3) !important;
-    transform: translateX(-1px) !important;
+    /*box-shadow: 0 10px 25px  rgba(255, 204, 0, 0.3) !important;
+    transform: translateX(-1px) !important;*/
+    transform: translateY(-10px) !important;
+    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.3) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
     margin-top: 2rem !important;
 }
 
