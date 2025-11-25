@@ -18,7 +18,7 @@ function toggleTheme() {
     body.classList.toggle('light-mode');
     const isLightMode = body.classList.contains('light-mode');
 
-    if (isLightMode){
+    if (isLightMode) {
         themeIcon.className = 'bx bx-moon theme-icon';
         localStorage.setItem('theme', 'light');
     } else {
@@ -27,15 +27,16 @@ function toggleTheme() {
     }
 }
 
-function loadSavedTheme () {
-    const savedTheme = localStorage.setItem('theme');
+themeToggle.addEventListener('click', toggleTheme);
 
+function loadSavedTheme() {
+    const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light') {
         body.classList.add('light-mode');
         themeIcon.className = 'bx bx-moon theme-icon';
     } else {
         body.classList.remove('light-mode');
-        themeIcon.className = 'bx bx-sun theme-icon';
+        themeIcon.className = 'bx bx-sun theme-icon'
     }
 }
 

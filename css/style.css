@@ -57,6 +57,8 @@ body {
     box-shadow: 0 8px 20px rgba(255, 204, 0, 0.3) !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
     margin-top: 2rem !important;
+    animation: glow 2s ease-in-out infinite alternate;
+    transition: all transform 3s ease;
 }
 
 .skills { 
