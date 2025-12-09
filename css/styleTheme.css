@@ -13,13 +13,13 @@
 
 body.light-mode {
     /* Fundo principal do corpo (light background) */
-    background-color: rgb(224, 224, 224) !important; 
+    background-color: #ffffffd9 !important; 
     color: rgb(77, 62, 62) !important; /* Cor principal do texto */
 }
 
 /* Navbar: Invertendo cores para o Light Mode */
 body.light-mode .navbar {
-    background-color: #FFFFFF !important; /* Fundo branco para a Nav */
+    background-color: #ffffffd9 !important; /* Fundo branco para a Nav */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
 }
 
