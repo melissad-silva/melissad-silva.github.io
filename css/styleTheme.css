@@ -44,6 +44,7 @@ body.light-mode .theme-toggle {
 body.light-mode .home,
 body.light-mode .skills,
 body.light-mode .process,
+body.light-mode .contato,
 body.light-mode #portfolio,
 body.light-mode #contato {
     background: rgb(245, 245, 245) !important; /* Fundo principal claro */
@@ -75,7 +76,9 @@ body.light-mode .home-img img {
 
 /* Títulos de Seção (Skills e Process) */
 body.light-mode .skills h2, 
-body.light-mode .process h2 {
+body.light-mode .process h2 ,
+body.light-mode .contato h2,
+body.light-mode .contato p {
     color:rgb(0, 0, 0) !important; /* Títulos de seção escuros */
 }
 
