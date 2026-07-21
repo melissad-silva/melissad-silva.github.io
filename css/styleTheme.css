@@ -7,113 +7,159 @@
     align-items: center;
     justify-content: center;
     /* Adapta a cor da borda do botão de tema */
-    border: 2px solid #ffcc00 !important;
+    border: 2px solid var(--accent) !important;
     transition: all 0.5s ease;
 }
 
+/* Light mode variable overrides */
 body.light-mode {
-    /* Fundo principal do corpo (light background) */
-    background-color: #ffffffd9 !important; 
-    color: rgb(77, 62, 62) !important; /* Cor principal do texto */
+    --bg: #ffffff; /* bg becomes white */
+    --surface: #ffffff; /* cards white */
+    --text: #222222; /* main text dark */
+    --muted: #5a5a5a; /* muted text - improved contrast */
+    --accent: #3b0764; /* previous light-mode purple */
+    --accent-2: #6d28d9;
+    --glow: rgba(59,7,100,0.14);
+    --card-shadow: 0 8px 20px rgba(59,7,100,0.08);
+}
+
+/* Ensure the body background becomes the light variable (overrides transparent default) */
+body.light-mode {
+    background-color: var(--bg) !important;
+}
+
+/* legacy explicit rules are retained where needed, but variables drive colors */
+html.light-mode {
+    background-color: var(--bg) !important; 
+}
+body.light-mode {
+    color: var(--text) !important; /* Cor principal do texto */
 }
 
 /* Navbar: Invertendo cores para o Light Mode */
-body.light-mode .navbar {
+body.light-mode .site .navbar {
     background-color: #ffffffd9 !important; /* Fundo branco para a Nav */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
 }
 
-body.light-mode .navbar-brand {
+body.light-mode .site .navbar-brand {
     color: rgb(35, 36, 36) !important; /* Cor escura para o Brand */
 }
 
-body.light-mode .navbar-nav .nav-link {
+body.light-mode .site .navbar-nav .nav-link {
     color: rgb(77, 62, 62) !important; /* Cor escura para os links */
 }
 
-body.light-mode .navbar-toggler i {
+body.light-mode .site .navbar-toggler i {
     color: rgb(77, 62, 62) !important; /* Ícone do Toggler escuro */
 }
 
-body.light-mode .theme-toggle {
+body.light-mode .site .theme-toggle {
     /* Cor do botão de tema no Light Mode */
-    border-color: rgb(77, 62, 62) !important;
-    color: rgb(77, 62, 62) !important;
+    border-color: var(--accent) !important;
+    color: var(--text) !important;
 }
 
-body.light-mode .home,
-body.light-mode .skills,
-body.light-mode .process,
-body.light-mode .contato,
-body.light-mode #portfolio,
-body.light-mode #contato {
-    background: rgb(245, 245, 245) !important; /* Fundo principal claro */
+body.light-mode .site .home,
+body.light-mode .site .skills,
+body.light-mode .site .process,
+body.light-mode .site .contato,
+body.light-mode .site #portfolio,
+body.light-mode .site #contato {
+    background: transparent !important; /* keep sections transparent so particles show */
     color: rgb(0, 0, 0) !important; /* Texto principal escuro */
 }
 
 /* Home Section */
-body.light-mode .home-content h1 {
+body.light-mode .site .home-content h1 {
     font-size: 30px; 
     color: rgb(0, 0, 0) !important; /* Título principal escuro */
 }
 
-body.light-mode .home .d-flex a {
+/* Ensure the gradient text used in dark mode is replaced with solid text in light mode */
+body.light-mode .site .home-content h1 {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
+    color: var(--text) !important;
+}
+
+/* Adjust particles blending for light mode to create bubble-like effect */
+body.light-mode #particles {
+    /* render normally over white; 'screen' over white yields white and hides the effect */
+    mix-blend-mode: normal;
+    opacity: 1;
+    filter: blur(0.15px) drop-shadow(0 10px 24px rgba(59,7,100,0.12));
+    transition: filter 240ms ease, opacity 200ms linear;
+}
+
+/* stronger, visible purple shadow for profile image in light mode */
+
+body.light-mode .site .home-img img {
+    box-shadow: 0 20px 60px rgba(124,58,237,0.18), 0 0 0 8px rgba(124,58,237,0.04) !important;
+}
+
+body.light-mode .site .home .d-flex a {
     color: rgb(2, 2, 2) !important; /* Ícones sociais escuros (estado normal) */
 }
 
 /* ⬅️ NOVO CÓDIGO AQUI para o efeito hover ⬅️ */
-body.light-mode .home .d-flex a:hover {
-    color: #ffcc00 !important; /* Destaque amarelo ao passar o mouse */
+body.light-mode .site .home .d-flex a:hover {
+    color: var(--accent) !important; /* Destaque roxo ao passar o mouse */
 }
 
-body.light-mode .home-img img {
-    /* Adapta a sombra para ser visível no fundo claro */
-    box-shadow: 0 8px 20px rgba(161, 129, 40, 0.719) !important; 
+/* Ensure the visible purple glow is applied (override previous duplicates) */
+body.light-mode .site .home-img img {
+    box-shadow: 0 24px 72px rgba(124,58,237,0.20), 0 0 0 8px rgba(124,58,237,0.05) !important;
     animation: glow 2s ease-in-out infinite alternate;
-    transition: all transform 3s ease;
+    transition: all transform 0.45s ease;
 }
 
 
 /* Títulos de Seção (Skills e Process) */
-body.light-mode .skills h2, 
-body.light-mode .process h2 ,
-body.light-mode .contato h2,
-body.light-mode .contato p {
+body.light-mode .site .skills h2, 
+body.light-mode .site .process h2 ,
+body.light-mode .site .contato h2,
+body.light-mode .site .contato p {
     color:rgb(0, 0, 0) !important; /* Títulos de seção escuros */
 }
 
-body.light-mode .skills-subtitle, 
-body.light-mode .process-subtitle {
+body.light-mode .site .skills-subtitle, 
+body.light-mode .site .process-subtitle {
     /* Subtítulos em cinza mais escuro para melhor contraste */
     color: rgb(120, 120, 120) !important; 
 }
 
-body.light-mode .card { 
-    /* Fundo dos cards branco puro */
-    background-color: #FFFFFF !important; 
-    /* Sombra mais suave para o modo claro */
+body.light-mode .site .card { 
+    background-color: var(--surface) !important; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08) !important; 
 }
 
-body.light-mode .card:hover { 
-    /* Mantém o hover, mas com sombra adaptada */
-    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.3) !important;
+body.light-mode .site .card:hover { 
+    box-shadow: 0 8px 20px var(--glow) !important;
 }
 
-body.light-mode .card h3 {
-    /* Títulos dos cards em cor de destaque */
-    color: #ffcc00 !important; 
+/* Make the contact card match other cards in light mode (remove glass gradient) */
+body.light-mode .site .contato .card {
+    background-color: var(--surface) !important;
+    background: var(--surface) !important;
+    backdrop-filter: none !important;
+    border: 1px solid rgba(124,58,237,0.06) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08) !important;
 }
 
-body.light-mode .card p {
+body.light-mode .site .card h3 {
+    color: var(--accent) !important; 
+}
+
+body.light-mode .site .card p {
     /* Texto interno dos cards em cinza para leitura */
     color: rgb(90, 90, 90) !important; 
 }
 
-body.light-mode .skill-icon, 
-body.light-mode .process-icon {
-    /* Mantém o ícone amarelo para contraste */
-    color: #ffcc00 !important;
+body.light-mode .site .skill-icon, 
+body.light-mode .site .process-icon {
+    color: var(--accent) !important;
 }
 
 /* =======================================
@@ -121,21 +167,20 @@ body.light-mode .process-icon {
    ======================================= */
 
 /* Botão Download CV */
-body.light-mode .btn-outline-warning {
-    border-color: #ffcc00 !important; 
-    color: #ffcc00 !important;
+body.light-mode .site .btn-outline-warning {
+    border-color: var(--accent) !important; 
+    color: var(--accent) !important;
 }
 
-body.light-mode .btn-outline-warning:hover {
-    background-color: #ffcc00 !important;
-    /* Inverte o texto do botão para o escuro do Light Mode */
-    color: rgb(35, 36, 36) !important;
-    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.3) !important;
+body.light-mode .site .btn-outline-warning:hover {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2)) !important;
+    color: var(--text) !important;
+    box-shadow: 0 8px 20px var(--glow) !important;
 }
 
 /* Scrollbar */
-body.light-mode ::-webkit-scrollbar-thumb {
-    background-color: #ffcc00;
+body.light-mode .site ::-webkit-scrollbar-thumb {
+    background-color: var(--accent);
 }
 
 
