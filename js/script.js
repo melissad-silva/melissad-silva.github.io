@@ -128,7 +128,7 @@ if (document.readyState === 'loading') {
         if (!sim.density) return;
         const gx = Math.floor((x / w) * sim.width);
         const gy = Math.floor((y / h) * sim.height);
-        const radiusFactor = 0.015;
+        const radiusFactor = 0.02;
         const radius = Math.max(1, Math.floor(sim.width * radiusFactor));
         for (let j = -radius; j <= radius; j++) {
             for (let i = -radius; i <= radius; i++) {
@@ -176,7 +176,7 @@ if (document.readyState === 'loading') {
         advect(sim.density, sim.densityPrev, sim.velX, sim.velY, dt);
         [sim.density, sim.densityPrev] = [sim.densityPrev, sim.density];
         // decay density
-        const decay = isLight() ? 0.95 : 0.94;
+        const decay = 0.94;
         for (let i = 0; i < sim.size; i++) sim.density[i] *= decay;
     }
 
@@ -185,21 +185,22 @@ if (document.readyState === 'loading') {
         const scale = sim.scale;
         const accent = particleColor || getAccent() || '#7c3aed';
         const lightMode = isLight();
-        const fluidTint = lightMode ? '#a855f7' : accent;
+        const fluidTint = lightMode ? '#c084fc' : accent;
         const shadowTint = lightMode ? '#7c3aed' : accent;
         const highlight = lightMode ? 'rgba(255,255,255,0.32)' : 'rgba(255,255,255,0.45)';
-        const baseFill = lightMode ? 'rgba(255,255,255,0.02)' : 'rgba(23,23,26,0.08)';
-        const dropletRadius = Math.max(2, Math.floor(scale * 0.62));
+        const baseFill = lightMode ? 'rgba(255,255,255,0.12)' : 'rgba(23,23,26,0.08)';
+        const dropletRadius = Math.max(3, Math.floor(scale * 1.65));
 
         ctx.save();
         ctx.globalCompositeOperation = 'source-over';
+        ctx.clearRect(0, 0, w, h);
         ctx.fillStyle = baseFill;
         ctx.fillRect(0, 0, w, h);
         ctx.restore();
 
         ctx.save();
         ctx.globalCompositeOperation = 'lighter';
-        ctx.filter = lightMode ? 'blur(0.3px) saturate(1.08)' : 'blur(0.85px) saturate(1.1)';
+        ctx.filter = 'blur(0.85px) saturate(1.1)';
         ctx.lineCap = 'round';
         ctx.lineJoin = 'round';
         for (let j = 0; j < sim.height; j++) {
@@ -211,7 +212,7 @@ if (document.readyState === 'loading') {
                     const py = j * scale + scale * 0.5;
                     const vx = sim.velX ? sim.velX[idx] : 0;
                     const vy = sim.velY ? sim.velY[idx] : 0;
-                    const alpha = lightMode ? Math.min(0.78, val * 1.05) : Math.min(0.28, val * 0.58);
+                    const alpha = Math.min(0.28, val * 0.58);
                     const gradient = ctx.createRadialGradient(px, py, 0, px, py, dropletRadius);
                     gradient.addColorStop(0, hexToRgba(fluidTint, alpha));
                     gradient.addColorStop(0.65, hexToRgba(fluidTint, alpha * 0.55));
@@ -221,7 +222,7 @@ if (document.readyState === 'loading') {
                     ctx.arc(px, py, dropletRadius, 0, Math.PI * 2);
                     ctx.fill();
 
-                    ctx.strokeStyle = hexToRgba(fluidTint, lightMode ? alpha * 0.28 : alpha * 0.22);
+                    ctx.strokeStyle = hexToRgba(fluidTint, alpha * 0.22);
                     ctx.lineWidth = Math.max(1, dropletRadius * 0.62);
                     ctx.beginPath();
                     ctx.moveTo(px - vx * scale * 0.45, py - vy * scale * 0.45);
@@ -231,8 +232,8 @@ if (document.readyState === 'loading') {
             }
         }
 
-        ctx.globalCompositeOperation = lightMode ? 'lighter' : 'screen';
-        ctx.filter = lightMode ? 'blur(0.16px)' : 'blur(0.28px)';
+        ctx.globalCompositeOperation = 'screen';
+        ctx.filter = 'blur(0.28px)';
         for (let j = 0; j < sim.height; j++) {
             for (let i = 0; i < sim.width; i++) {
                 const idx = IX(i, j);
@@ -240,7 +241,7 @@ if (document.readyState === 'loading') {
                 if (val > 0.03) {
                     const px = i * scale + scale * 0.5;
                     const py = j * scale + scale * 0.5;
-                    const glowAlpha = lightMode ? Math.min(0.22, val * 0.28) : Math.min(0.1, val * 0.14);
+                    const glowAlpha = Math.min(0.1, val * 0.14);
                     const glow = ctx.createRadialGradient(px, py, 0, px, py, Math.max(2, dropletRadius * 0.85));
                     glow.addColorStop(0, hexToRgba(highlight, glowAlpha));
                     glow.addColorStop(1, hexToRgba(highlight, 0));
