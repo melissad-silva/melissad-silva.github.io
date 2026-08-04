@@ -17,10 +17,10 @@ body.light-mode {
     --surface: #ffffff; /* cards white */
     --text: #222222; /* main text dark */
     --muted: #5a5a5a; /* muted text - improved contrast */
-    --accent: #3b0764; /* previous light-mode purple */
-    --accent-2: #6d28d9;
-    --glow: rgba(59,7,100,0.14);
-    --card-shadow: 0 8px 20px rgba(59,7,100,0.08);
+    --accent: #7c3aed; /* same purple tone as dark theme */
+    --accent-2: #5b21b6;
+    --glow: rgba(124,58,237,0.18);
+    --card-shadow: 0 8px 20px rgba(91,33,182,0.12);
 }
 
 /* Ensure the body background becomes the light variable (overrides transparent default) */
@@ -96,7 +96,7 @@ body.light-mode #particles {
 /* stronger, visible purple shadow for profile image in light mode */
 
 body.light-mode .site .home-img img {
-    border: 5px solid rgba(91,33,182,0.42) !important;
+    border: 5px solid rgba(124,58,237,0.42) !important;
     box-shadow: 0 14px 34px rgba(124,58,237,0.12), 0 0 0 6px rgba(124,58,237,0.04) !important;
 }
 
