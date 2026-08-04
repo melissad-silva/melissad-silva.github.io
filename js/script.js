@@ -54,8 +54,8 @@ if (document.readyState === 'loading') {
     let particles = [];
     let w = 0, h = 0;
     let DPR = window.devicePixelRatio || 1;
-    // Use 'fluid' effect: grid-based fluid simulation
-    const EFFECT = 'fluid';
+    // Disable the mouse-follow fluid effect.
+    const EFFECT = 'disabled';
     const LIQUID_CONFIG = {
         count: 9,
         sizeMin: 20,
@@ -290,9 +290,8 @@ if (document.readyState === 'loading') {
         } else if (EFFECT === 'fluid') {
             setupSim();
         } else {
-            const area = Math.max(1, w * h);
-            const count = isLight() ? Math.max(14, Math.round(area / 90000)) : Math.max(18, Math.round(area / 25000));
-            for (let i = 0; i < count; i++) particles.push(new Particle());
+            // No background effect is active.
+            return;
         }
     }
 
@@ -311,7 +310,6 @@ if (document.readyState === 'loading') {
             renderSim();
         } else {
             ctx.clearRect(0, 0, w, h);
-            for (let p of particles) { p.update(); p.draw(particleColor); }
         }
         requestAnimationFrame(animate);
     }

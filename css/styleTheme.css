@@ -112,8 +112,7 @@ body.light-mode .site .home .d-flex a:hover {
 /* Ensure the visible purple glow is applied (override previous duplicates) */
 body.light-mode .site .home-img img {
     box-shadow: 0 18px 44px rgba(124,58,237,0.16), 0 0 0 6px rgba(124,58,237,0.05) !important;
-    animation: glow 2s ease-in-out infinite alternate;
-    transition: all transform 0.45s ease;
+    transition: box-shadow 0.35s ease;
 }
 
 
