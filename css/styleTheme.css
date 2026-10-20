@@ -1,13 +1,13 @@
 body.light-mode {
     --color-bg: #f0eae1;
     --color-surface: #f7f2eb;
-    --color-accent: #d97732;
+    --color-accent: #FF6A00;
     --color-text: #1f1d1b;
     --color-muted: #675f59;
     --color-border: #c9b8a9;
 
     color-scheme: light;
-    --color-glow: rgba(217, 119, 50, 0.22);
+    --color-glow: rgba(255, 106, 0, 0.22);
 }
 
 body.light-mode .site-navbar {

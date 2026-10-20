@@ -3,7 +3,7 @@
 
     --color-bg: #171717;
     --color-surface: #222222;
-    --color-accent: #d97732;
+    --color-accent: #FF6A00;
     --color-text: #f0eae1;
     --color-muted: #a8a29e;
     --color-border: #39332f;
@@ -352,6 +352,35 @@ button:focus-visible,
         0 16px 44px rgba(0, 0, 0, 0.38);
 }
 
+/* FOX LOGO PREVIEW END */
+.fox-logo-preview {
+    position: absolute;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    width: 86px;
+    height: 86px;
+    border-radius: 50%; /* Círculo perfeito */
+    border: 1px solid rgba(217, 119, 50, 0.45);
+    background: rgba(23, 23, 23, 0.82);
+    box-shadow: 0 0 0 4px rgba(217, 119, 50, 0.1), 0 10px 20px rgba(0, 0, 0, 0.35);
+    display: grid;
+    place-items: center;
+    padding: 0;         /* Remove todo o preenchimento para a imagem ir até à borda */
+    overflow: hidden;   /* Opcional: Garante que nada saia do limite circular */
+    z-index: 2;
+}
+
+.fox-logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* Faz a imagem preencher todo o círculo sem distorcer */
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    filter: saturate(1.08) contrast(1.08);
+}
+
+/* FOX LOGO PREVIEW END */
+
 .section-heading {
     margin-bottom: 1.45rem;
 }
@@ -538,6 +567,15 @@ button:focus-visible,
         width: min(80vw, 290px);
         height: min(80vw, 290px);
     }
+
+    /* FOX LOGO PREVIEW START */
+    .fox-logo-preview {
+        width: 68px;
+        height: 68px;
+        right: 0.6rem;
+        bottom: 0.6rem;
+    }
+    /* FOX LOGO PREVIEW END */
 }
 
 @media (prefers-reduced-motion: reduce) {
