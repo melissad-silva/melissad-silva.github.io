@@ -111,6 +111,29 @@ button:focus-visible,
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
+.site-navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    margin: 0;
+    padding-left: 0;
+}
+
+.nav-item {
+    list-style: none;
+}
+
 .navbar-brand {
     color: var(--color-text) !important;
     font-size: 1.24rem;
@@ -273,6 +296,11 @@ button:focus-visible,
     display: flex;
     align-items: center;
     gap: 0.9rem;
+}
+
+.social-links-contact {
+    justify-content: center;
+    margin-top: 1.1rem;
 }
 
 .social-links a {
@@ -468,6 +496,16 @@ button:focus-visible,
 
     .site-navbar {
         background: rgba(23, 23, 23, 0.96);
+    }
+
+    .navbar-collapse {
+        width: 100%;
+    }
+
+    .navbar-nav {
+        align-items: flex-start;
+        gap: 0.55rem;
+        padding: 0.95rem 0 0.4rem;
     }
 
     .nav-link::after {

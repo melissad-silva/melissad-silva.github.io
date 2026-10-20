@@ -45,12 +45,33 @@ applySavedTheme();
 
 const navbarCollapse = document.getElementById("navbarNav");
 const navLinks = document.querySelectorAll("#navbarNav .nav-link");
+const navbarToggler = document.querySelector(".navbar-toggler");
+
+function openMenuFallback() {
+    if (!navbarCollapse || !navbarToggler) return;
+    const expanded = navbarToggler.getAttribute("aria-expanded") === "true";
+    navbarToggler.setAttribute("aria-expanded", expanded ? "false" : "true");
+    navbarCollapse.classList.toggle("show", !expanded);
+}
+
+if (navbarToggler && navbarCollapse && !(window.bootstrap && bootstrap.Collapse)) {
+    navbarToggler.addEventListener("click", openMenuFallback);
+}
 
 navLinks.forEach((link) => {
     link.addEventListener("click", () => {
         if (!navbarCollapse || !navbarCollapse.classList.contains("show")) return;
-        const collapseInstance = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
-        collapseInstance.hide();
+
+        if (window.bootstrap && bootstrap.Collapse) {
+            const collapseInstance = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+            collapseInstance.hide();
+            return;
+        }
+
+        if (navbarToggler) {
+            navbarToggler.setAttribute("aria-expanded", "false");
+        }
+        navbarCollapse.classList.remove("show");
     });
 });
 

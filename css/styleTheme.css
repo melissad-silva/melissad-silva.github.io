@@ -57,6 +57,10 @@ body.light-mode .profile-image {
         0 14px 30px rgba(58, 35, 15, 0.24);
 }
 
+body.light-mode .home h1 {
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+}
+
 body.light-mode #particles {
     opacity: 0.35;
 }
